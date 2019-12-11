@@ -1,1 +1,13 @@
-<p>cat works!</p>
+<!-- Use Angular interpolation binding to say hello (cat name)  -->
+<!-- message for cat with a name  -->
+<h1
+    *ngIf="get()"
+>
+Hello {{ get() }}!
+</h1>
+<!-- message for cat with no name  -->
+<h1
+    *ngIf="!get()"
+>
+ {{ name }}
+</h1>
