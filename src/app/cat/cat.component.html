@@ -1,0 +1,5 @@
+<div class="cat">
+    <ng-container *ngIf="catName; then catHasName; else catHasNoName"></ng-container>
+    <ng-template #catHasName>Meow, {{ catName | titlecase }}!</ng-template>
+    <ng-template #catHasNoName>Alf was here.</ng-template>
+</div>
