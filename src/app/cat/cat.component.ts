@@ -12,4 +12,8 @@ export class CatComponent implements OnInit {
   ngOnInit() {
   }
 
+  catName(): string {
+    return this.actRoute.snapshot.params.name;
+  }
+
 }
