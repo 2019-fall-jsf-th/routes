@@ -8,14 +8,21 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class CatComponent implements OnInit {
 
+  name = "";
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-  ) {}
-
-  ngOnInit() {
-    let catName = this.route.snapshot.paramMap.get('felix');
+  ) {
+    this.name = this.getName();
   }
 
+  ngOnInit() {
+    
+  }
+
+  getName(): string {
+    return this.route.snapshot.params.name;
+  }
 
 }
